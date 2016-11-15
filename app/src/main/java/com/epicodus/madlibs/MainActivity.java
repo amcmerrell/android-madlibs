@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        String celebrityGender="";
+        String familyGender="";
+//        public void onRadioButtonClicked(View view){
+//            boolean checked = ((RadioButton) view).isChecked();
+//            switch (view.getId()){
+//                case R.id.femaleCelebrity:
+//                    if(checked)
+//                        celebrityGender= "her";
+//                    break;
+//                case R.id.maleCelebrity:
+//                    if(checked)
+//                        celebrityGender="his";
+//            }
+//        }
         mButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

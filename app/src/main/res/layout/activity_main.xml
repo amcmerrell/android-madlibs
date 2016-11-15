@@ -28,103 +28,204 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
+
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nationality"
-        android:hint="plural nationality"
+        android:layout_above="@+id/button"
         android:layout_below="@+id/titleTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/scrollView"
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/crime"
-        android:hint="plural type of criminal"
-        android:layout_below="@+id/nationality"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+       >
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nationality"
+                android:hint="plural nationality"
+                android:layout_below="@+id/titleTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/noun1"
-        android:hint="plural noun"
-        android:layout_below="@+id/crime"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/crime"
-        android:layout_alignEnd="@+id/crime" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/crime"
+                android:hint="plural type of criminal"
+                android:layout_below="@+id/nationality"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/noun2"
-        android:hint="plural noun"
-        android:layout_below="@+id/noun1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/noun1"
-        android:layout_alignEnd="@+id/noun1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noun1"
+                android:hint="plural noun"
+                android:layout_below="@+id/crime"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/crime"
+                android:layout_alignEnd="@+id/crime" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/noun3"
-        android:hint="object"
-        android:layout_below="@+id/noun2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/noun2"
-        android:layout_alignEnd="@+id/noun2" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noun2"
+                android:hint="plural noun"
+                android:layout_below="@+id/noun1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/noun1"
+                android:layout_alignEnd="@+id/noun1" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/celebrity"
-        android:hint="celebirty"
-        android:layout_below="@+id/noun3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/noun3"
-        android:layout_alignEnd="@+id/noun3" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noun3"
+                android:hint="object"
+                android:layout_below="@+id/noun2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/noun2"
+                android:layout_alignEnd="@+id/noun2" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bodyPart"
-        android:hint="body part"
-        android:layout_below="@+id/celebrity"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/celebrity"
-        android:layout_alignEnd="@+id/celebrity" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/celebrity"
+                android:hint="celebirty"
+                android:layout_below="@+id/noun3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+            <TableRow>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/familyMember"
-        android:hint="type of family member"
-        android:layout_below="@+id/bodyPart"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/bodyPart"
-        android:layout_alignEnd="@+id/bodyPart" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/verb"
-        android:hint="verb"
-        android:layout_below="@+id/familyMember"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/familyMember"
-        android:layout_alignEnd="@+id/familyMember" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="the celebrities gender:"
+                    android:id="@+id/textView"
+                    android:layout_column="0" />
+                <RadioGroup
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:id="@+id/maleCelebrity"
+                        android:checked="false"
+                        android:layout_alignTop="@+id/radioButton"
+                        android:layout_alignLeft="@+id/button"
+                        android:layout_alignStart="@+id/button"
+                        android:layout_column="1"
+                        android:onClick="onRadioButtonClicked"/>
+                    />
+
+                    <RadioButton
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:id="@+id/femaleCelebrity"
+                        android:layout_above="@+id/bodyPart"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/button"
+                        android:checked="false"
+                        android:layout_toRightOf="@+id/button"
+                        android:layout_column="2"
+                        android:onClick="onRadioButtonClicked"/>
+                    />
+                </RadioGroup>
+
+
+            </TableRow>
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bodyPart"
+                android:hint="body part"
+                android:layout_below="@+id/celebrity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/noun3"
+                android:layout_alignEnd="@+id/noun3" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/familyMember"
+                android:hint="type of family member"
+                android:layout_below="@+id/bodyPart"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/bodyPart"
+                android:layout_alignEnd="@+id/bodyPart" />
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="the family members gender:"
+                    android:id="@+id/familyGendeTextView"
+                    android:layout_column="0" />
+                <RadioGroup android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:id="@+id/maleFamily"
+                        android:checked="false"
+                        android:layout_alignTop="@+id/radioButton"
+                        android:layout_alignLeft="@+id/button"
+                        android:layout_alignStart="@+id/button"
+                        android:layout_column="1"
+                        android:onClick="onRadioButtonClicked"/>
+                    />
+
+                    <RadioButton
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:id="@+id/femaleFamily"
+                        android:layout_above="@+id/bodyPart"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/button"
+                        android:checked="false"
+                        android:layout_toRightOf="@+id/button"
+                        android:layout_column="2"
+                        android:onClick="onRadioButtonClicked"/>
+                    />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/verb"
+                android:hint="verb"
+                android:layout_below="@+id/familyMember"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/familyMember"
+                android:layout_alignEnd="@+id/familyMember" />
+
+
+        </TableLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
