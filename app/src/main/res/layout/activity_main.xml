@@ -115,6 +115,7 @@
                     android:text="the celebrities gender:"
                     android:id="@+id/textView"
                     android:layout_column="0" />
+
                 <RadioGroup
                     android:orientation="horizontal">
                     <RadioButton
@@ -177,9 +178,11 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="the family members gender:"
-                    android:id="@+id/familyGendeTextView"
+                    android:id="@+id/familyGenderTextView"
                     android:layout_column="0" />
-                <RadioGroup android:orientation="horizontal">
+                <RadioGroup
+                    android:id="@+id/familyGender"
+                android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

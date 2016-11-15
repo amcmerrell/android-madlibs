@@ -3,6 +3,7 @@ package com.epicodus.madlibs;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,26 +25,16 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.bodyPart) EditText mBodyPart;
     @Bind(R.id.familyMember) EditText mFamilyMember;
     @Bind(R.id.verb) EditText mVerb;
+    private String celebrityGender="";
+    private String familyGender="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        String celebrityGender="";
-        String familyGender="";
-//        public void onRadioButtonClicked(View view){
-//            boolean checked = ((RadioButton) view).isChecked();
-//            switch (view.getId()){
-//                case R.id.femaleCelebrity:
-//                    if(checked)
-//                        celebrityGender= "her";
-//                    break;
-//                case R.id.maleCelebrity:
-//                    if(checked)
-//                        celebrityGender="his";
-//            }
-//        }
+
         mButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -57,11 +48,37 @@ public class MainActivity extends AppCompatActivity {
                 words.add(mBodyPart.getText().toString());
                 words.add(mFamilyMember.getText().toString());
                 words.add(mVerb.getText().toString());
-
+                words.add(celebrityGender);
+                words.add(familyGender);
+//                words.add(mVerb.getText().toString());
                 Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
                 intent.putExtra("words", words);
                 startActivity(intent);
             }
         });
+    }
+
+    public void onRadioButtonClicked(View view){
+        boolean checked = ((RadioButton) view).isChecked();
+        switch (view.getId()){
+            case R.id.femaleCelebrity:
+                if(checked)
+                    celebrityGender= "her";
+                break;
+            case R.id.maleCelebrity:
+                if(checked)
+                    celebrityGender="his";
+                break;
+        }
+        switch (view.getId()){
+            case R.id.femaleFamily:
+                if(checked)
+                    familyGender= "her";
+                break;
+            case R.id.maleFamily:
+                if(checked)
+                    familyGender="his";
+                break;
+        }
     }
 }
