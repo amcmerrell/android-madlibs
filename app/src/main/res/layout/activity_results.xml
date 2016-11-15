@@ -23,7 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/resultsTextView"
         android:background="@color/opaqueBackground"
-        android:textSize="25sp"
+        android:textSize="40sp"
         android:textColor="#ffffff"
         android:textAlignment="center"
         android:layout_centerVertical="true"
