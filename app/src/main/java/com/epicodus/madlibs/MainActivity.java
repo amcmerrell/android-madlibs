@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.maleFamily:
                 if(checked)
-                    familyGender="his";
+                    familyGender="him";
                 break;
         }
     }

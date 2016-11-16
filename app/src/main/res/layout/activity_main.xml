@@ -51,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/button"
         android:layout_below="@+id/titleTextView"
+        android:padding="15dp"
         android:id="@+id/scrollView"
 
         android:background="@color/primaryText">
