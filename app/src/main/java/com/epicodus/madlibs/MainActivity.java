@@ -57,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
                 intent.putExtra("words", words);
                 startActivity(intent);
+                mNationality.setText("");
+               mCrime.setText("");
+                mNoun1.setText("");
+                mNoun2.setText("");
+                mNoun3.setText("");
+                mCelebrity.setText("");
+                mBodyPart.setText("");
+                mFamilyMember.setText("");
+                mVerb.setText("");
             }
         });
     }
